@@ -3,9 +3,11 @@ package epam.com.task_rest_boot.controller;
 import epam.com.task_rest_boot.dto.ChangeLoginDto;
 import epam.com.task_rest_boot.dto.LoginRequestDto;
 import epam.com.task_rest_boot.dto.RegistrationResponseDto;
-import epam.com.task_rest_boot.dto.trainer.*;
+import epam.com.task_rest_boot.dto.trainer.TrainerCreateDto;
+import epam.com.task_rest_boot.dto.trainer.TrainerDto;
+import epam.com.task_rest_boot.dto.trainer.TrainerUpdateDto;
 import epam.com.task_rest_boot.dto.training.TrainingDto;
-import epam.com.task_rest_boot.service.impl.TrainerServiceImpl;
+import epam.com.task_rest_boot.service.TrainerService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
@@ -20,9 +22,9 @@ import java.util.List;
 @RestController
 @RequestMapping("gym.com/api/trainer")
 public class TrainerController {
-    private final TrainerServiceImpl trainerService;
+    private final TrainerService trainerService;
 
-    public TrainerController(TrainerServiceImpl trainerService) {
+    public TrainerController(TrainerService trainerService) {
         this.trainerService = trainerService;
     }
 

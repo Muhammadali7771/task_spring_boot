@@ -1,20 +1,23 @@
 package epam.com.task_rest_boot.controller;
 
 import epam.com.task_rest_boot.dto.training.TrainingCreateDto;
-import epam.com.task_rest_boot.service.impl.TrainingServiceImpl;
+import epam.com.task_rest_boot.service.TrainingService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("gym.com/api/training")
 public class TrainingController {
-    private final TrainingServiceImpl trainingService;
+    private final TrainingService trainingService;
 
-    public TrainingController(TrainingServiceImpl trainingService) {
+    public TrainingController(TrainingService trainingService) {
         this.trainingService = trainingService;
     }
 

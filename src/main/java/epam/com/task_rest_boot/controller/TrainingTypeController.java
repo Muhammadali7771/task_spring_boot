@@ -1,7 +1,7 @@
 package epam.com.task_rest_boot.controller;
 
 import epam.com.task_rest_boot.dto.training_type.TrainingTypeDto;
-import epam.com.task_rest_boot.service.impl.TrainingTypeServiceImpl;
+import epam.com.task_rest_boot.service.TrainingTypeService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
@@ -16,9 +16,9 @@ import java.util.List;
 @RestController
 @RequestMapping("gym.com/api/training-type")
 public class TrainingTypeController {
-    private final TrainingTypeServiceImpl trainingTypeService;
+    private final TrainingTypeService trainingTypeService;
 
-    public TrainingTypeController(TrainingTypeServiceImpl trainingTypeService) {
+    public TrainingTypeController(TrainingTypeService trainingTypeService) {
         this.trainingTypeService = trainingTypeService;
     }
 
